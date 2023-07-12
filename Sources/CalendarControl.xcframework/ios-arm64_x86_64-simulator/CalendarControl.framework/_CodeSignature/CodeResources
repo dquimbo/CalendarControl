@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CalendarControl-Swift.h</key>
 		<data>
-		k256bDjGzvBiwyV8hzSp8NcftfI=
+		p8STReM0ZYqM/UV/qmLlQTSVjXo=
 		</data>
 		<key>Headers/CalendarControl.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		5IDfIyhMD9R+BZ1YF1z9s0QUZRo=
+		iw1ZSV3prV/WumA5GEqrlNRwtAI=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sxVjsBEkGkpi12Dat1qFBFTcvpQ=
+		gADWnyfH/d9DTweF9f3yzwT61c4=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sxVjsBEkGkpi12Dat1qFBFTcvpQ=
+		gADWnyfH/d9DTweF9f3yzwT61c4=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		D4DrXUHNzU9zd/2oeHlHeJchPoo=
+		b6iLV7IpB+gvzkB92IJgS4rR/4I=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5IDfIyhMD9R+BZ1YF1z9s0QUZRo=
+		iw1ZSV3prV/WumA5GEqrlNRwtAI=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		k3FBSnkVeQCS3+Vpsblz67A8jZE=
+		/IA1i9b/m0o7msV/m3T8aH6jYGo=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		k3FBSnkVeQCS3+Vpsblz67A8jZE=
+		/IA1i9b/m0o7msV/m3T8aH6jYGo=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1bk7YfqVEMMWdiZGSM3Xf6dyTuU=
+		zAwP4QIEwneiOdxpTh2uah7fKJM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lu6YA/8caCzezP6D8vB6HywqqL+TjVMad1+F3Dj83XY=
+			hRy7rj7hxtIaZCG7Wqpmh1cn+yUEoTdbL1bmINd6sZY=
 			</data>
 		</dict>
 		<key>Headers/CalendarControl.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nqpVRYGspUWrABL7ftrWmNU6RhbH+Htt8dJVWXtCCEQ=
+			bSbfYUCPiarUYOMK/xO1wvps0YcgLGEXheluKkS16CQ=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMTHzetkm4+cm0SUy81QOi5WFw7AOCdOYAeNPmQ6E50=
+			JdvLV4alibmzgiORbTKpJmZX2aQmrpdmeN8E2vCKt20=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XMTHzetkm4+cm0SUy81QOi5WFw7AOCdOYAeNPmQ6E50=
+			JdvLV4alibmzgiORbTKpJmZX2aQmrpdmeN8E2vCKt20=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			63LJPrN/T0EA82qX6F5n4uZGKttxpr//468mT1NHh5o=
+			JQpJ3tRtxgIZWiwce87lMT4+yStq9KoRlAcm/+r1sJs=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nqpVRYGspUWrABL7ftrWmNU6RhbH+Htt8dJVWXtCCEQ=
+			bSbfYUCPiarUYOMK/xO1wvps0YcgLGEXheluKkS16CQ=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ImLh7QpRHn9lE0Fg+TAN2M6CcflMA/4mFO8MAyjLQi8=
+			7rbrgcFt04oYNjPwWPCUTKy0dBG5uUfsNZc2EI7HqRg=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ImLh7QpRHn9lE0Fg+TAN2M6CcflMA/4mFO8MAyjLQi8=
+			7rbrgcFt04oYNjPwWPCUTKy0dBG5uUfsNZc2EI7HqRg=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iv0LQ9gPASf5q32pr2gIiAvza15ZvfC19KxT04FG+g0=
+			08pdPe3J1CBQPflJnuykmWpRzYteYX6Io6d/6ahbdy0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

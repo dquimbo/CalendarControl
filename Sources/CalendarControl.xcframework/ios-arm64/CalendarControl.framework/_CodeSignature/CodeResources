@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CalendarControl-Swift.h</key>
 		<data>
-		4a6gD9PvCS3960ENMj2OIbN1wn0=
+		HYSf62SVgd28KpB4k0u3QO5kFUc=
 		</data>
 		<key>Headers/CalendarControl.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		5IDfIyhMD9R+BZ1YF1z9s0QUZRo=
+		iw1ZSV3prV/WumA5GEqrlNRwtAI=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Mu9c0icW3zUlKlTFHZVe07wgW/w=
+		PhmvKi2r90Mpoqf5klJ2jYrm8+8=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Mu9c0icW3zUlKlTFHZVe07wgW/w=
+		PhmvKi2r90Mpoqf5klJ2jYrm8+8=
 		</data>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		TeX/+S3PLC9WPYJ+/wD7p545AWE=
+		KTc3VfZje5/63jqYoYK1mH0dB78=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R420YR6z1oUB9+rcf0JZ0eWjuLcRRQngYalvkKSOTV8=
+			b7n+beLaYc3OGl9CyDVlAE9Q73UFotDdWzVsKbvzOuo=
 			</data>
 		</dict>
 		<key>Headers/CalendarControl.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nqpVRYGspUWrABL7ftrWmNU6RhbH+Htt8dJVWXtCCEQ=
+			bSbfYUCPiarUYOMK/xO1wvps0YcgLGEXheluKkS16CQ=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BHLLzgDU42nfLAjjZiuz2Vb4NiT5JNuyoroXIogLkU=
+			hP9CfKCzrs8LOAds5Auurag+golzjqYB2pzccv4CJw0=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BHLLzgDU42nfLAjjZiuz2Vb4NiT5JNuyoroXIogLkU=
+			hP9CfKCzrs8LOAds5Auurag+golzjqYB2pzccv4CJw0=
 			</data>
 		</dict>
 		<key>Modules/CalendarControl.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			27OMthaNwe8/82XPAlXFdAXUkJQmnZc3snOSIRZ1vR0=
+			5taNvC9h7bRNtbNVspKfJTW5JhF1HHpuOklkAm7blOI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

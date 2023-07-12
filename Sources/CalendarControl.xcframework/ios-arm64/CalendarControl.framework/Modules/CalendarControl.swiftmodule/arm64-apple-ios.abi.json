@@ -468,6 +468,94 @@
         "printedName": "CalendarTestVersionViewController",
         "children": [
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(baseDate:selectedDateChanged:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CalendarTestVersionViewController",
+                "printedName": "CalendarControl.CalendarTestVersionViewController",
+                "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Date) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15CalendarControl0A25TestVersionViewControllerC8baseDate08selectedH7ChangedAC10Foundation0H0V_yAHctcfc",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC8baseDate08selectedH7ChangedAC10Foundation0H0V_yAHctcfc",
+            "moduleName": "CalendarControl",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CalendarControl.CalendarTestVersionViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CalendarTestVersionViewController",
+                    "printedName": "CalendarControl.CalendarTestVersionViewController",
+                    "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController(im)initWithCoder:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "CalendarControl",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "viewDidLoad",
             "printedName": "viewDidLoad()",
@@ -484,6 +572,45 @@
             "moduleName": "CalendarControl",
             "overriding": true,
             "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillTransition",
+            "printedName": "viewWillTransition(to:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewControllerTransitionCoordinator",
+                "printedName": "UIKit.UIViewControllerTransitionCoordinator",
+                "usr": "c:objc(pl)UIViewControllerTransitionCoordinator"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController(im)viewWillTransitionToSize:withTransitionCoordinator:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC18viewWillTransition2to4withySo6CGSizeV_So06UIViewfI11Coordinator_ptF",
+            "moduleName": "CalendarControl",
+            "overriding": true,
+            "objc_name": "viewWillTransitionToSize:withTransitionCoordinator:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -549,45 +676,161 @@
             "init_kind": "Designated"
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(coder:)",
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:numberOfItemsInSection:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CalendarControl.CalendarTestVersionViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CalendarTestVersionViewController",
-                    "printedName": "CalendarControl.CalendarTestVersionViewController",
-                    "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
-                "name": "NSCoder",
-                "printedName": "Foundation.NSCoder",
-                "usr": "c:objc(cs)NSCoder"
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "c:@M@CalendarControl@objc(cs)CalendarTestVersionViewController(im)initWithCoder:",
-            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "declKind": "Func",
+            "usr": "c:@CM@CalendarControl@objc(cs)CalendarTestVersionViewController(im)collectionView:numberOfItemsInSection:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC010collectionE0_22numberOfItemsInSectionSiSo012UICollectionE0C_SitF",
             "moduleName": "CalendarControl",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "initWithCoder:",
+            "objc_name": "collectionView:numberOfItemsInSection:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
               "Custom",
-              "Required"
+              "AccessControl"
             ],
-            "init_kind": "Designated"
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:cellForItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionViewCell",
+                "printedName": "UIKit.UICollectionViewCell",
+                "usr": "c:objc(cs)UICollectionViewCell"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@CalendarControl@objc(cs)CalendarTestVersionViewController(im)collectionView:cellForItemAtIndexPath:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC010collectionE0_13cellForItemAtSo012UICollectionE4CellCSo0lE0C_10Foundation9IndexPathVtF",
+            "moduleName": "CalendarControl",
+            "objc_name": "collectionView:cellForItemAtIndexPath:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:didSelectItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@CalendarControl@objc(cs)CalendarTestVersionViewController(im)collectionView:didSelectItemAtIndexPath:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC010collectionE0_15didSelectItemAtySo012UICollectionE0C_10Foundation9IndexPathVtF",
+            "moduleName": "CalendarControl",
+            "objc_name": "collectionView:didSelectItemAtIndexPath:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:layout:sizeForItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionViewLayout",
+                "printedName": "UIKit.UICollectionViewLayout",
+                "usr": "c:objc(cs)UICollectionViewLayout"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@CalendarControl@objc(cs)CalendarTestVersionViewController(im)collectionView:layout:sizeForItemAtIndexPath:",
+            "mangledName": "$s15CalendarControl0A25TestVersionViewControllerC010collectionE0_6layout13sizeForItemAtSo6CGSizeVSo012UICollectionE0C_So0nE6LayoutC10Foundation9IndexPathVtF",
+            "moduleName": "CalendarControl",
+            "objc_name": "collectionView:layout:sizeForItemAtIndexPath:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -600,7 +843,6 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)UIViewController",
-        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "UIKit.UIViewController",
           "UIKit.UIResponder",
@@ -933,6 +1175,223 @@
       "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarPickerViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 10995,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2105,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 2171,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2333,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2372,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2498,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2567,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2750,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2994,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3237,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3722,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3963,
+      "length": 3,
+      "value": "\"d\""
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4386,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4453,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5520,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 5638,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5989,
+      "length": 2,
+      "value": "85"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6295,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1905,
+      "length": 33,
+      "value": "\"CalendarControl.CalendarTestVersionViewController\""
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7749,
+      "length": 64,
+      "value": "\"An error occurred when generating the metadata for \""
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 7812,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8005,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9205,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9213,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "Array",
+      "offset": 9284,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9328,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9410,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "Array",
+      "offset": 9432,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9474,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9611,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10752,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/diegoquimbo\/Desktop\/CreateFrameworkForiOS\/starter\/2-Framework\/CalendarControl\/CalendarControl\/Controller\/CalendarTestVersionViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11011,
       "length": 1,
       "value": "7"
     },
