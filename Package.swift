@@ -1,3 +1,5 @@
+// swift-tools-version:5.3
+
 import PackageDescription
 
 let package = Package(
@@ -13,6 +15,6 @@ let package = Package(
   targets: [
     .binaryTarget(
         name: "PBBluetooth",
-        path: "./build/PBBluetooth.xcframework")
+        path: "./Sources/PBBluetooth.xcframework")
   ]
 )
