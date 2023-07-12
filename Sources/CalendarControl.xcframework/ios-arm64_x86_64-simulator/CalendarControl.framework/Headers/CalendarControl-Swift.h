@@ -312,6 +312,14 @@ SWIFT_CLASS("_TtC15CalendarControl28CalendarPickerViewController")
 @end
 
 
+
+SWIFT_CLASS("_TtC15CalendarControl33CalendarTestVersionViewController")
+@interface CalendarTestVersionViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #endif
 #if defined(__cplusplus)
 #endif
@@ -633,6 +641,14 @@ SWIFT_CLASS("_TtC15CalendarControl28CalendarPickerViewController")
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+
+SWIFT_CLASS("_TtC15CalendarControl33CalendarTestVersionViewController")
+@interface CalendarTestVersionViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if defined(__cplusplus)
