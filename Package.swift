@@ -21,6 +21,14 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "PBBluetooth",
-            path: "./Sources/PBBluetooth.xcframework")
+            path: "./Sources/PBBluetooth.xcframework"),
+        .target(
+            name: "PBBluetoothWrapper",
+            dependencies: [
+                .product(name: "iOSMcuManagerLibrary", package: "IOS-nRF-Connect-Device-Manager"),
+                .target(name: "PBBluetooth"),
+            ],
+            path: "./Sources/"
+        ),
     ]
 )
