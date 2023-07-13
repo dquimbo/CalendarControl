@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "iOSMcuManagerLibrary",
-        "repositoryURL": "https://github.com/NordicSemiconductor/IOS-nRF-Connect-Device-Manager",
-        "state": {
-          "branch": null,
-          "revision": "2fcdf9a5b20e6ab0c2215cec37ed3f26c0888126",
-          "version": "1.3.1"
-        }
-      },
-      {
-        "package": "SwiftCBOR",
-        "repositoryURL": "https://github.com/unrelentingtech/SwiftCBOR.git",
-        "state": {
-          "branch": null,
-          "revision": "895c9aa84ce3b04106905e398ac870e0cca59d26",
-          "version": "0.4.4"
-        }
+  "pins" : [
+    {
+      "identity" : "ios-nrf-connect-device-manager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NordicSemiconductor/IOS-nRF-Connect-Device-Manager",
+      "state" : {
+        "revision" : "2fcdf9a5b20e6ab0c2215cec37ed3f26c0888126",
+        "version" : "1.3.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swiftcbor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/unrelentingtech/SwiftCBOR.git",
+      "state" : {
+        "revision" : "895c9aa84ce3b04106905e398ac870e0cca59d26",
+        "version" : "0.4.4"
+      }
+    }
+  ],
+  "version" : 2
 }
