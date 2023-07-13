@@ -24,6 +24,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SimpleTest",
-            dependencies: []),
+            dependencies: [
+                .product(name: "iOSMcuManagerLibrary", package: "IOS-nRF-Connect-Device-Manager")
+            ]
+        ),
     ]
 )
