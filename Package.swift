@@ -19,6 +19,6 @@ let package = Package(
   targets: [
     .binaryTarget(
         name: "PBBluetooth",
-        path: "./Sources/PBBluetooth.xcframework")
+        path: "./Sources/PBBluetooth-v3.5.8.xcframework")
   ]
 )
