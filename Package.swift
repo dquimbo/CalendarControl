@@ -17,6 +17,10 @@ let package = Package(
         .package(
             url: "https://github.com/NordicSemiconductor/IOS-nRF-Connect-Device-Manager",
             from: "1.0.0"
+        ),
+        .package(
+            url: "https://github.com/ReactiveX/RxSwift",
+            from: "6.0.0"
         )
     ],
     targets: [
@@ -29,6 +33,7 @@ let package = Package(
             name: "PBBluetoothWrapper",
             dependencies: [
                 .product(name: "iOSMcuManagerLibrary", package: "IOS-nRF-Connect-Device-Manager"),
+                .product(name: "RxSwift", package: "rxswift"),
                 .target(name: "PBBluetooth")
             ]
         ),
