@@ -8,7 +8,6 @@
 
 import Foundation
 import Combine
-import CoreLocation
 import CoreBluetooth
 
 /// Class that represents Pebblebee's Found with the latest Firmware.

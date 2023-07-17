@@ -24,7 +24,11 @@ let package = Package(
         dependencies: [
             .product(name: "iOSMcuManagerLibrary", package: "IOS-nRF-Connect-Device-Manager"),
         ],
-        path: "./PBBluetooth/"
+        path: "./PBBluetooth/",
+        linkerSettings: [
+          .linkedFramework("CoreLocation"),
+          .linkedFramework("CoreBluetooth"),
+        ]
     )
   ]
 )

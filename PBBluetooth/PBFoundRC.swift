@@ -8,9 +8,7 @@
 
 import UIKit
 import Combine
-import CoreLocation
 import CoreBluetooth
-
 
 /// The PBFound version compatible with advertised Model Number 14
 public class PBFoundRC: PBFinder1 {

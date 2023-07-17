@@ -8,8 +8,8 @@
 
 import CoreMotion
 import Combine
-import CoreBluetooth
 import CoreLocation
+import CoreBluetooth
 
 /// `PBBluetoothManager` provides a simple, high-level interface for interacting with Pebblebee devices.
 public class PBBluetoothManager: NSObject {

@@ -8,8 +8,8 @@
 
 ///The `PBBroadcastManager` is mostly used internally. However, you should call the shared instances' `.stopLocalBeacon(_ sender: AnyObject)` function in your `appDidEnterBackground` app delegate class.
 import Foundation
-import CoreLocation
 import CoreBluetooth
+import CoreLocation
 
 open class PBBroadcastManager: NSObject {
     ///The shared instance of the 'PBBroadcastManager'

@@ -9,7 +9,6 @@
 import Foundation
 import CoreLocation
 
-
 ///Class that represents a single location that a given 'PBDevice' was seen at.
 public class PBLocationReading: PBHistory {
     ///The Location object associated with the record. Convenient for making `MKMapItems`

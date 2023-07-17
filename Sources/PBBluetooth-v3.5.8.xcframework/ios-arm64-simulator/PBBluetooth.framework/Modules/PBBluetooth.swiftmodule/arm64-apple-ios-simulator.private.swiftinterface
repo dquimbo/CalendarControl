@@ -1,0 +1,893 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PBBluetooth
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import CoreBluetooth
+import CoreLocation
+import CoreMotion
+import Foundation
+@_exported import PBBluetooth
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import iOSMcuManagerLibrary
+public enum PBMFiR4KTagJingle : Swift.UInt8 {
+  case standard
+  case loud
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiR4KTag : PBBluetooth.PBMFiClip {
+  public var firmwareVersion: Swift.Int?
+  public var txPower: Swift.Int?
+  public var stationaryMinutes: Swift.Int?
+  override public func discoverServices()
+  override public func triggerBondFromDevice(password: Foundation.Data?, completion: @escaping (PBBluetooth.PBBondTriggerResult) -> Swift.Void)
+  @objc override public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc override public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  override public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  @objc deinit
+}
+extension PBBluetooth.PBMFiR4KTag {
+  public func quietBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func silentBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getChallengeToken(completion: @escaping (Swift.Result<Foundation.Data, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getAdvertisementInterval(completion: @escaping (Swift.Result<Swift.Int, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setAdvertisementInterval(advertisementInterval: Swift.Int, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getJingleSelected(completion: @escaping (Swift.Result<PBBluetooth.PBMFiR4KTagJingle, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setJingle(jingle: PBBluetooth.PBMFiR4KTagJingle, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getJingleDuration(completion: @escaping (Swift.Result<Swift.Int, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setJingleDuration(jingleDuration: Swift.Int, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getAccThreshold(completion: @escaping (Swift.Result<Swift.Int, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setAccThreshold(accThreshold: Swift.Int, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getAccTime(completion: @escaping (Swift.Result<Swift.Int, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setAccTime(time: Swift.Int, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getTxPower(completion: @escaping (Swift.Result<Swift.Int, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setTxPower(txPower: Swift.Int, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getLEDColor(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setLEDColor(ledColor: [Swift.UInt8], completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+public enum PBLoggLevelOptions : Swift.Int {
+  case none
+  case some
+  case verbose
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PBLocationServicesStatus {
+  case Unavailable
+  case Unauthorized
+  case Authorized
+  public static func == (a: PBBluetooth.PBLocationServicesStatus, b: PBBluetooth.PBLocationServicesStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBBluetoothCentralStatus {
+  case Unavailable
+  case Unauthorized
+  case Authorized
+  case Other
+  public static func == (a: PBBluetooth.PBBluetoothCentralStatus, b: PBBluetooth.PBBluetoothCentralStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBBluetoothAdvertisingStatus {
+  case Unavailable
+  case Unauthorized
+  case Authorized
+  public static func == (a: PBBluetooth.PBBluetoothAdvertisingStatus, b: PBBluetooth.PBBluetoothAdvertisingStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBButtonState {
+  case none
+  case singlePress
+  case longPress
+  case doublePress
+  case triplePress
+  case quadruplePress
+  case quintuplePress
+  case doublePressPlusHold
+  case triplePressPlusHold
+  public static func == (a: PBBluetooth.PBButtonState, b: PBBluetooth.PBButtonState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBBuzzState {
+  case iddle
+  case attemptingBuzz
+  case buzzing
+  case attemptingStop
+  public static func == (a: PBBluetooth.PBBuzzState, b: PBBluetooth.PBBuzzState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBFinderAdvertisementState : Swift.Int {
+  case high
+  case low
+  case unknown
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PBBuzzer2AdvertisementState : Swift.Int {
+  case high
+  case low
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PBBuzzer2BuzzState : Swift.Int {
+  case illuminated
+  case buzzing
+  case notBuzzing
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PBStoneMotionState {
+  case notMoving
+  case moving
+  case unknown
+  public static func == (a: PBBluetooth.PBStoneMotionState, b: PBBluetooth.PBStoneMotionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBPeripheralConnectionError : Swift.Error {
+  case noDiscoveredPeripheral
+  case operatingSystemError(e: (any Swift.Error)?)
+}
+public enum PBPeripheralDisconnectionError : Swift.Error {
+  case noDiscoveredPeripheral
+  case peripheralNotConnected
+  case operatingSystemError(e: (any Swift.Error)?)
+}
+public enum PBLocationHistoryKey : Swift.String {
+  case timestampKey
+  case latitudeKey
+  case longitudeKey
+  case batteryKey
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct BatteryCapacityLevel {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiTag : PBBluetooth.PBMFiClip {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiDevice : PBBluetooth.PBDevice {
+  public var broadcastingName: Swift.String?
+  public var bondingState: PBBluetooth.PBBondingState
+  @objc deinit
+}
+public protocol PBBasicBluetoothDevice {
+  func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+public protocol PBBluetoothUpdatableDevice {
+  var firmwareUpdateProgress: Combine.CurrentValueSubject<Swift.Int, Swift.Never> { get }
+  func runOTA(image: Foundation.Data, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)
+  func getFirmwareVersion(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func verifyHardwareRevision(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+public enum PBDeviceType : Swift.Int {
+  case honey
+  case finder
+  case finder2
+  case card
+  case found
+  case mfiCard
+  case mfiClip
+  case mfiTag
+  case mfiWhite
+  case mfiGreen
+  case mfiR4KTag
+  case mfiCardV2
+  case mfiClipV2
+  case mfiTagV2
+  case unknown
+  public var isMFI: Swift.Bool {
+    get
+  }
+  public var isCellular: Swift.Bool {
+    get
+  }
+  public var nameType: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol PBRebootableDevice {
+  func reboot(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiCardV2 : PBBluetooth.PBMFiClipV2 {
+  @objc deinit
+}
+public enum PBBluetoothError : Swift.Error {
+  case valueNotAccepted
+  case couldntDetermineDeviceState
+  case couldntConnectDevice
+  case errorWrittingInCharacteristic
+  case errorReadingValueFromCharacteristic
+  case requestTimedOut
+  case featureNotAvailableInFirmware
+  case bluetoothUnauthorized
+  public static func == (a: PBBluetooth.PBBluetoothError, b: PBBluetooth.PBBluetoothError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBFirmwareUpdateError : Swift.Error {
+  case couldntDetermineDeviceState
+  case couldntConnectDevice
+  case errorWrittingInCharacteristic
+  case errorWritingOnOverflowdedAddress
+  case corruptedImage
+  case failedChecksumVerification
+  public static func == (a: PBBluetooth.PBFirmwareUpdateError, b: PBBluetooth.PBFirmwareUpdateError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBBluetoothManager : ObjectiveC.NSObject {
+  public static let shared: PBBluetooth.PBBluetoothManager
+  public var isScanningEnabled: Swift.Bool {
+    get
+  }
+  public var bluetoothState: Combine.CurrentValueSubject<PBBluetooth.PBBluetoothCentralStatus, Swift.Never> {
+    get
+  }
+  public var devices: Swift.Set<PBBluetooth.PBDevice> {
+    get
+  }
+  public var advertisementReceivedPublisher: Combine.AnyPublisher<PBBluetooth.PBDevice, Swift.Never> {
+    get
+  }
+  public func startScanning()
+  public func stopScanning()
+  public func removeDevice(macAddress: Swift.String)
+  public func removeAllDevices()
+  @objc public var locationUpdatesEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var headingUpdatesEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public var locationServicesStatus: PBBluetooth.PBLocationServicesStatus {
+    get
+  }
+  public func requestAllowAlwaysLocationServices()
+  @objc public func resetScan(_ sender: Swift.AnyObject)
+  @objc public func configureRegionMonitoring(deviceMACtoMonitor: [Swift.String] = [String]())
+  @objc public func configureRegionMonitoringCall(deviceMACtoMonitor: [Swift.String] = [String]())
+  public func getCachedLocation() -> PBBluetooth.PBLocationReading?
+  @objc deinit
+}
+extension PBBluetooth.PBBluetoothManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+}
+extension PBBluetooth.PBBluetoothManager : CoreLocation.CLLocationManagerDelegate {
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didDetermineState state: CoreLocation.CLRegionState, for region: CoreLocation.CLRegion)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, monitoringDidFailFor region: CoreLocation.CLRegion?, withError error: any Swift.Error)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateHeading newHeading: CoreLocation.CLHeading)
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
+}
+extension PBBluetooth.PBBluetoothManager : PBBluetooth.AutoConnectedDevices {
+  public func addAutoConnectDevice(macAddress: Swift.String)
+  public func removeAutoConnectDevice(macAddress: Swift.String)
+  public func getAutoConnectDevices() -> [Swift.String]
+  public func containsAutoConnectDevice(macAddress: Swift.String) -> Swift.Bool
+  public func removeAllAutoConnectDevices()
+}
+public enum PBFinderFindOptions {
+  case longRange
+  case shortRange
+  public static func == (a: PBBluetooth.PBFinderFindOptions, b: PBBluetooth.PBFinderFindOptions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBFinderFindError {
+  case notConnected
+  case connectionFail(error: any Swift.Error)
+  case bluetoothError(error: any Swift.Error)
+  case broadcastFail(fellback: Swift.Bool)
+  case connected
+}
+public enum PBSetDormantError {
+  case connectionFail(error: any Swift.Error)
+  case bluetoothError(error: any Swift.Error)
+  case notConnected
+}
+public enum PBSetOTAError {
+  case connectionFail(error: any Swift.Error)
+  case bluetoothError(error: any Swift.Error)
+  case notConnected
+}
+public enum PBSetGenericError {
+  case connectionFail(error: any Swift.Error)
+  case bluetoothError(error: any Swift.Error)
+  case notConnected
+}
+@objc @_hasMissingDesignatedInitializers public class PBFinder1 : PBBluetooth.PBDevice {
+  public var major: Swift.Int! {
+    get
+  }
+  public var minor: Swift.Int! {
+    get
+  }
+  public var buzzState: PBBluetooth.PBBuzzState {
+    get
+  }
+  public var advertisementState: PBBluetooth.PBFinderAdvertisementState {
+    get
+  }
+  public func discoverServices()
+  @objc public func wakeUpFinder(withManager m: PBBluetooth.PBBluetoothManager)
+  public func setDormant(withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ error: PBBluetooth.PBSetDormantError?) -> Swift.Void)
+  public func setOTA(withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ error: PBBluetooth.PBSetOTAError?) -> Swift.Void)
+  public func setCancelBuzz(withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ error: PBBluetooth.PBSetGenericError?) -> Swift.Void)
+  public func setReboot(withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ error: PBBluetooth.PBSetGenericError?) -> Swift.Void)
+  public func setJingle(withManager m: PBBluetooth.PBBluetoothManager?, indexValue val: Swift.Int?, completion: @escaping (_ error: PBBluetooth.PBSetGenericError?) -> Swift.Void)
+  public func setVolume(withManager m: PBBluetooth.PBBluetoothManager?, indexValue val: Swift.Int?, completion: @escaping (_ error: PBBluetooth.PBSetGenericError?) -> Swift.Void)
+  public func find(option: PBBluetooth.PBFinderFindOptions, withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ findError: PBBluetooth.PBFinderFindError?) -> Swift.Void)
+  public func resetDevice(withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ error: PBBluetooth.PBSetGenericError?) -> Swift.Void)
+  public func writeToReset()
+  public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  @objc deinit
+}
+extension PBBluetooth.PBFinder1 {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension PBBluetooth.PBFinder1 : PBBluetooth.PBBluetoothDevice {
+  public func setBuzzVolume(volume: PBBluetooth.PBDeviceVolume, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func stopBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setInDormantMode(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFinder1 : PBBluetooth.PBRebootableDevice {
+  public func reboot(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+public var PBLogLevel: PBBluetooth.PBLoggLevelOptions
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiClipV2 : PBBluetooth.PBMFiClip, PBBluetooth.PBMFiDeviceV2 {
+  public var FMNAvailable: Swift.Bool
+  public var FMDAvailable: Swift.Bool
+  public var FMNProvisioned: Swift.Bool
+  public var FMDProvisioned: Swift.Bool
+  public var networkActiveMSB: Swift.Bool
+  public var networkActiveLSB: Swift.Bool
+  public var smpUnlocked: Swift.Bool
+  @objc deinit
+}
+public protocol PBSMPProtocol : PBBluetooth.PBBluetoothUpdatableDevice {
+  var firmwareUpdateCompletion: ((Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)? { get set }
+  var firmwareUpdateProgress: Combine.CurrentValueSubject<Swift.Int, Swift.Never> { get }
+  func smpReadImageSlots(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrImageStateResponse>)
+  func smpUploadImage(data: Foundation.Data, callback: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  func smpConfirmImageSlot(hash: [Swift.UInt8], callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+  func smpEraseImageSlot(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+  func smpReset(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+}
+public enum PBBondingState : Swift.UInt8 {
+  case bonded
+  case unbonded
+  case unknown
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum PBBondTriggerResult {
+  case success
+  case passwordRequired
+  case passwordNotAccepted
+  case deviceButtonPressRequired
+  case error(PBBluetooth.PBBluetoothError)
+}
+public protocol PBBondableDeviceProtocol {
+  func triggerBondFromDevice(password: Foundation.Data?, completion: @escaping (PBBluetooth.PBBondTriggerResult) -> Swift.Void)
+  func factoryResetDevice(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+@objc @_hasMissingDesignatedInitializers public class PBDevice : ObjectiveC.NSObject {
+  public var name: Swift.String? {
+    get
+  }
+  public var macAddress: Swift.String! {
+    get
+  }
+  public var lastSeenTime: Foundation.Date! {
+    get
+  }
+  public var isInRange: Swift.Bool {
+    get
+  }
+  public var deviceType: PBBluetooth.PBDeviceType
+  public var batteryPercentage: Swift.Double? {
+    get
+  }
+  public var connectionState: CoreBluetooth.CBPeripheralState? {
+    get
+  }
+  public var connectionStatePublisher: Combine.AnyPublisher<CoreBluetooth.CBPeripheralState, Swift.Never> {
+    get
+  }
+  public var rssiPublisher: Combine.AnyPublisher<Foundation.NSNumber, Swift.Never> {
+    get
+  }
+  public var buttonState: PBBluetooth.PBButtonState {
+    get
+  }
+  public func connect(completion: ((_ connectionError: PBBluetooth.PBBluetoothError?) -> Swift.Void)?)
+  public func disconnect(completion: @escaping (_ disconnectionError: PBBluetooth.PBBluetoothError?) -> Swift.Void)
+  public static func == (lhs: PBBluetooth.PBDevice, rhs: PBBluetooth.PBDevice) -> Swift.Bool
+  @objc public var lastLocation: CoreLocation.CLLocation? {
+    @objc get
+  }
+  public var locationHistory: [PBBluetooth.PBLocationReading] {
+    get
+  }
+  @objc deinit
+}
+extension PBBluetooth.PBDevice : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: (any Swift.Error)?)
+}
+public let PBDeviceDidBecomeReachableNotification: Foundation.NSNotification.Name
+public let PBDeviceDidBecomeUnreachableNotification: Foundation.NSNotification.Name
+public let PBBatteryStateNotification: Foundation.NSNotification.Name
+public let PBButtonStateChangeNotification: Foundation.NSNotification.Name
+public let PBFinderBuzzStateNotification: Foundation.NSNotification.Name
+public let PBFinderAdvertisementStateNotification: Foundation.NSNotification.Name
+public let PBDeviceAutoConnectableNotification: Foundation.Notification.Name
+public let PBLocationUpdateNotification: Foundation.NSNotification.Name
+public let PBLocationServiceStatusNotification: Foundation.NSNotification.Name
+public let PBHeadingUpdateNotification: Foundation.Notification.Name
+public let PBLocationDidFailNotification: Foundation.Notification.Name
+public let PBMonitoringDidFailNotification: Foundation.Notification.Name
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBCard : PBBluetooth.PBFinder1 {
+  override public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiCard : PBBluetooth.PBMFiClip {
+  @objc deinit
+}
+public protocol PBMFiDeviceV2 : PBBluetooth.PBMFiDevice {
+  var FMNAvailable: Swift.Bool { get set }
+  var FMDAvailable: Swift.Bool { get set }
+  var FMNProvisioned: Swift.Bool { get set }
+  var FMDProvisioned: Swift.Bool { get set }
+  var networkActiveMSB: Swift.Bool { get set }
+  var networkActiveLSB: Swift.Bool { get set }
+  var smpUnlocked: Swift.Bool { get set }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiClip : PBBluetooth.PBMFiDevice {
+  public var smpUploadImageCompletion: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)?
+  public var firmwareUpdateCompletion: ((Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)?
+  public var firmwareUpdateProgress: Combine.CurrentValueSubject<Swift.Int, Swift.Never>
+  public func discoverServices()
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  public func triggerBondFromDevice(password: Foundation.Data?, completion: @escaping (PBBluetooth.PBBondTriggerResult) -> Swift.Void)
+  public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  @objc deinit
+}
+extension PBBluetooth.PBMFiClip : PBBluetooth.PBBluetoothDevice {
+  public func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func stopBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setBuzzVolume(volume: PBBluetooth.PBDeviceVolume, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setInDormantMode(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBMFiClip : PBBluetooth.PBBondableDeviceProtocol {
+  public func factoryResetDevice(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBMFiClip : PBBluetooth.PBSMPProtocol, PBBluetooth.PBBluetoothUpdatableDevice, iOSMcuManagerLibrary.FirmwareUpgradeDelegate, iOSMcuManagerLibrary.ImageUploadDelegate {
+  public func getFirmwareVersion(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func runOTA(image: Foundation.Data, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)
+  public func verifyHardwareRevision(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func smpReadImageSlots(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrImageStateResponse>)
+  public func smpUploadImage(data: Foundation.Data, callback: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  public func smpConfirmImageSlot(hash: [Swift.UInt8], callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+  public func smpEraseImageSlot(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+  public func smpReset(callback: @escaping iOSMcuManagerLibrary.McuMgrCallback<iOSMcuManagerLibrary.McuMgrResponse>)
+  public func uploadProgressDidChange(bytesSent: Swift.Int, imageSize: Swift.Int, timestamp: Foundation.Date)
+  public func upgradeDidComplete()
+  public func upgradeDidFail(inState state: iOSMcuManagerLibrary.FirmwareUpgradeState, with error: any Swift.Error)
+  public func upgradeDidStart(controller: any iOSMcuManagerLibrary.FirmwareUpgradeController)
+  public func upgradeStateDidChange(from previousState: iOSMcuManagerLibrary.FirmwareUpgradeState, to newState: iOSMcuManagerLibrary.FirmwareUpgradeState)
+  public func upgradeDidCancel(state: iOSMcuManagerLibrary.FirmwareUpgradeState)
+  public func uploadDidFail(with error: any Swift.Error)
+  public func uploadDidFinish()
+  public func uploadDidCancel()
+}
+public enum PBHoneyFindOptions {
+  case lightUp
+  case buzz
+  case longBuzz
+  public static func == (a: PBBluetooth.PBHoneyFindOptions, b: PBBluetooth.PBHoneyFindOptions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBHoneyFindError {
+  case connectionFail(error: any Swift.Error)
+  case notConnected
+  case findOptionNotDefined
+}
+public enum PBHoneyFirmwareVersion : Swift.Int {
+  case unknown
+  case preRobert
+  case robertRevision
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBHoney : PBBluetooth.PBDevice {
+  public var firmwareVersion: PBBluetooth.PBHoneyFirmwareVersion {
+    get
+    set
+  }
+  public func discoverServices()
+  public func requestBattery(completion: @escaping (_ batteryPercentage: Swift.Int?) -> Swift.Void)
+  public func find(_ option: PBBluetooth.PBHoneyFindOptions, withManager m: PBBluetooth.PBBluetoothManager?, completion: @escaping (_ findError: PBBluetooth.PBHoneyFindError?) -> Swift.Void)
+  @objc deinit
+}
+extension PBBluetooth.PBHoney {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension PBBluetooth.PBHoney : PBBluetooth.PBBasicBluetoothDevice {
+  public func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBFoundRC : PBBluetooth.PBFinder1 {
+  public var refreshRateInternal: Foundation.TimeInterval {
+    get
+  }
+  public var firmwareUpdateProgress: Combine.CurrentValueSubject<Swift.Int, Swift.Never>
+  override public func discoverServices()
+  override public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  @objc deinit
+}
+extension PBBluetooth.PBFoundRC {
+  @objc override dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc override dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc override dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension PBBluetooth.PBFoundRC : PBBluetooth.PBCellularDevice {
+  public func setDebugMode(turnOn: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getIsDebugModeOn(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getIMEI(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getTrackingMode(completion: @escaping (Swift.Result<PBBluetooth.PBTrackingMode, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setTrackingMode(mode: PBBluetooth.PBTrackingMode, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getLTEStatus(completion: @escaping (Swift.Result<PBBluetooth.PBCellularDeviceLTEStatus, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getICCID(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFoundRC : PBBluetooth.PBBluetoothUpdatableDevice {
+  public func runOTA(image: Foundation.Data, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)
+  public func getFirmwareVersion(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func verifyHardwareRevision(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBFinder2 : PBBluetooth.PBFinder1 {
+  public var refreshRateInternal: Foundation.TimeInterval {
+    get
+  }
+  @objc deinit
+}
+public protocol PBBluetoothDevice : PBBluetooth.PBBasicBluetoothDevice {
+  func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func stopBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  func setBuzzVolume(volume: PBBluetooth.PBDeviceVolume, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func setInDormantMode(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+public enum PBDeviceVolume : Swift.Int {
+  case mute
+  case low
+  case medium
+  case high
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class PBFound : PBBluetooth.PBDevice {
+  public var refreshRateInternal: Foundation.TimeInterval {
+    get
+  }
+  public var buzzState: PBBluetooth.PBBuzzState {
+    get
+  }
+  public var advertisementState: PBBluetooth.PBFinderAdvertisementState {
+    get
+  }
+  public var firmwareUpdateProgress: Combine.CurrentValueSubject<Swift.Int, Swift.Never>
+  public var major: Swift.Int! {
+    get
+  }
+  public var minor: Swift.Int! {
+    get
+  }
+  public func discoverServices()
+  @objc deinit
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBBluetoothDevice {
+  public func getBatteryPercentage(withManufacturerData data: Foundation.Data) -> Swift.Double?
+  public func buzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func stopBuzz(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setBuzzVolume(volume: PBBluetooth.PBDeviceVolume, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setInDormantMode(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBCellularDevice {
+  public func getIMEI(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getTrackingMode(completion: @escaping (Swift.Result<PBBluetooth.PBTrackingMode, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setTrackingMode(mode: PBBluetooth.PBTrackingMode, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getLTEStatus(completion: @escaping (Swift.Result<PBBluetooth.PBCellularDeviceLTEStatus, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getICCID(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func setDebugMode(turnOn: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func getIsDebugModeOn(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFound {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBBluetoothUpdatableDevice {
+  public func runOTA(image: Foundation.Data, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBFirmwareUpdateError>) -> Swift.Void)
+  public func getFirmwareVersion(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  public func verifyHardwareRevision(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBRebootableDevice {
+  public func reboot(completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBChargingStatusReporter {
+  public func getChargingStatus(completion: @escaping (Swift.Result<PBBluetooth.PBChargingStatus, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBFound : PBBluetooth.PBDeviceAutoConnectable {
+  public func getNewRSSI()
+  public func attemptToReconnect()
+}
+public protocol PBDeviceAutoConnectable {
+  func attemptToReconnect()
+  func getNewRSSI()
+}
+public protocol AutoConnectedDevices {
+  func addAutoConnectDevice(macAddress: Swift.String)
+  func removeAutoConnectDevice(macAddress: Swift.String)
+  func getAutoConnectDevices() -> [Swift.String]
+  func containsAutoConnectDevice(macAddress: Swift.String) -> Swift.Bool
+}
+extension Foundation.Date {
+  public func timeAgoSinceNow() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class PBTemperatureReading : PBBluetooth.PBHistory {
+  public var rawTemp: Swift.Int! {
+    get
+  }
+  public var calibratedTemp: Swift.Int? {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PBHistory : Swift.Hashable {
+  public var timeStampSeconds: Swift.Double {
+    get
+  }
+  public var timeStampMilliseconds: Swift.Double {
+    get
+  }
+  public var timeStamp: Foundation.Date! {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+  public static func == (lhs: PBBluetooth.PBHistory, rhs: PBBluetooth.PBHistory) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+}
+public enum PBTrackingMode : Swift.UInt8, Swift.CaseIterable, Swift.Comparable {
+  case dynamic
+  case emergency
+  case lowPower
+  case bluetoothOnly
+  case area
+  case finding
+  case standby
+  case motion
+  case liveTracking
+  public static func getTrackingModeFrom(string: Swift.String) -> PBBluetooth.PBTrackingMode?
+  public var stringIdentifier: Swift.String {
+    get
+  }
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public static func < (lhs: PBBluetooth.PBTrackingMode, rhs: PBBluetooth.PBTrackingMode) -> Swift.Bool
+  public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [PBBluetooth.PBTrackingMode]
+  public typealias RawValue = Swift.UInt8
+  public static var allCases: [PBBluetooth.PBTrackingMode] {
+    get
+  }
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class PBLocationReading : PBBluetooth.PBHistory {
+  public var location: CoreLocation.CLLocation!
+  public var JSONPiece: [Swift.String : Swift.AnyObject] {
+    get
+  }
+  override public var hashValue: Swift.Int {
+    get
+  }
+  @objc deinit
+}
+public enum PBCellularDeviceLTEStatus : Swift.String {
+  case connected
+  case disconnected
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol PBCellularDevice {
+  func getTrackingMode(completion: @escaping (Swift.Result<PBBluetooth.PBTrackingMode, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func setTrackingMode(mode: PBBluetooth.PBTrackingMode, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func getIMEI(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func getLTEStatus(completion: @escaping (Swift.Result<PBBluetooth.PBCellularDeviceLTEStatus, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func getICCID(completion: @escaping (Swift.Result<Swift.String, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func setDebugMode(turnOn: Swift.Bool, completion: @escaping (Swift.Result<Swift.Void, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+  func getIsDebugModeOn(completion: @escaping (Swift.Result<Swift.Bool, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class PBRSSIReading : PBBluetooth.PBHistory {
+  public var rssi: Swift.Int! {
+    get
+  }
+  public var accuracy: Swift.Double! {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class PBBroadcastManager : ObjectiveC.NSObject {
+  public static let shared: PBBluetooth.PBBroadcastManager
+  @objc public func requestAuthorization(withQueue: Dispatch.DispatchQueue?)
+  @objc public func stopLocalBeacon(_ sender: Swift.AnyObject)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension PBBluetooth.PBBroadcastManager : CoreBluetooth.CBPeripheralManagerDelegate {
+  @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PBMFiTagV2 : PBBluetooth.PBMFiClipV2 {
+  @objc deinit
+}
+public enum PBChargingStatus {
+  case charging
+  case notCharging
+  public static func == (a: PBBluetooth.PBChargingStatus, b: PBBluetooth.PBChargingStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol PBChargingStatusReporter {
+  func getChargingStatus(completion: @escaping (Swift.Result<PBBluetooth.PBChargingStatus, PBBluetooth.PBBluetoothError>) -> Swift.Void)
+}
+extension PBBluetooth.PBMFiR4KTagJingle : Swift.Equatable {}
+extension PBBluetooth.PBMFiR4KTagJingle : Swift.Hashable {}
+extension PBBluetooth.PBMFiR4KTagJingle : Swift.RawRepresentable {}
+extension PBBluetooth.PBLoggLevelOptions : Swift.Equatable {}
+extension PBBluetooth.PBLoggLevelOptions : Swift.Hashable {}
+extension PBBluetooth.PBLoggLevelOptions : Swift.RawRepresentable {}
+extension PBBluetooth.PBLocationServicesStatus : Swift.Equatable {}
+extension PBBluetooth.PBLocationServicesStatus : Swift.Hashable {}
+extension PBBluetooth.PBBluetoothCentralStatus : Swift.Equatable {}
+extension PBBluetooth.PBBluetoothCentralStatus : Swift.Hashable {}
+extension PBBluetooth.PBBluetoothAdvertisingStatus : Swift.Equatable {}
+extension PBBluetooth.PBBluetoothAdvertisingStatus : Swift.Hashable {}
+extension PBBluetooth.PBButtonState : Swift.Equatable {}
+extension PBBluetooth.PBButtonState : Swift.Hashable {}
+extension PBBluetooth.PBBuzzState : Swift.Equatable {}
+extension PBBluetooth.PBBuzzState : Swift.Hashable {}
+extension PBBluetooth.PBFinderAdvertisementState : Swift.Equatable {}
+extension PBBluetooth.PBFinderAdvertisementState : Swift.Hashable {}
+extension PBBluetooth.PBFinderAdvertisementState : Swift.RawRepresentable {}
+extension PBBluetooth.PBBuzzer2AdvertisementState : Swift.Equatable {}
+extension PBBluetooth.PBBuzzer2AdvertisementState : Swift.Hashable {}
+extension PBBluetooth.PBBuzzer2AdvertisementState : Swift.RawRepresentable {}
+extension PBBluetooth.PBBuzzer2BuzzState : Swift.Equatable {}
+extension PBBluetooth.PBBuzzer2BuzzState : Swift.Hashable {}
+extension PBBluetooth.PBBuzzer2BuzzState : Swift.RawRepresentable {}
+extension PBBluetooth.PBStoneMotionState : Swift.Equatable {}
+extension PBBluetooth.PBStoneMotionState : Swift.Hashable {}
+extension PBBluetooth.PBLocationHistoryKey : Swift.Equatable {}
+extension PBBluetooth.PBLocationHistoryKey : Swift.Hashable {}
+extension PBBluetooth.PBLocationHistoryKey : Swift.RawRepresentable {}
+extension PBBluetooth.PBDeviceType : Swift.Equatable {}
+extension PBBluetooth.PBDeviceType : Swift.Hashable {}
+extension PBBluetooth.PBDeviceType : Swift.RawRepresentable {}
+extension PBBluetooth.PBBluetoothError : Swift.Equatable {}
+extension PBBluetooth.PBBluetoothError : Swift.Hashable {}
+extension PBBluetooth.PBFirmwareUpdateError : Swift.Equatable {}
+extension PBBluetooth.PBFirmwareUpdateError : Swift.Hashable {}
+extension PBBluetooth.PBFinderFindOptions : Swift.Equatable {}
+extension PBBluetooth.PBFinderFindOptions : Swift.Hashable {}
+extension PBBluetooth.PBBondingState : Swift.Equatable {}
+extension PBBluetooth.PBBondingState : Swift.Hashable {}
+extension PBBluetooth.PBBondingState : Swift.RawRepresentable {}
+extension PBBluetooth.PBHoneyFindOptions : Swift.Equatable {}
+extension PBBluetooth.PBHoneyFindOptions : Swift.Hashable {}
+extension PBBluetooth.PBHoneyFirmwareVersion : Swift.Equatable {}
+extension PBBluetooth.PBHoneyFirmwareVersion : Swift.Hashable {}
+extension PBBluetooth.PBHoneyFirmwareVersion : Swift.RawRepresentable {}
+extension PBBluetooth.PBDeviceVolume : Swift.Equatable {}
+extension PBBluetooth.PBDeviceVolume : Swift.Hashable {}
+extension PBBluetooth.PBDeviceVolume : Swift.RawRepresentable {}
+extension PBBluetooth.PBTrackingMode : Swift.Hashable {}
+extension PBBluetooth.PBTrackingMode : Swift.RawRepresentable {}
+extension PBBluetooth.PBCellularDeviceLTEStatus : Swift.Equatable {}
+extension PBBluetooth.PBCellularDeviceLTEStatus : Swift.Hashable {}
+extension PBBluetooth.PBCellularDeviceLTEStatus : Swift.RawRepresentable {}
+extension PBBluetooth.PBChargingStatus : Swift.Equatable {}
+extension PBBluetooth.PBChargingStatus : Swift.Hashable {}
