@@ -4,21 +4,27 @@ import PackageDescription
 
 let package = Package(
   name: "PBBluetooth",
+  platforms: [
+    .iOS(.v13)
+  ],
   products: [
     .library(
         name: "PBBluetooth",
         targets: ["PBBluetooth"]),
   ],
   dependencies: [
-      // Dependencies declare other packages that this package depends on.
       .package(
           url: "https://github.com/NordicSemiconductor/IOS-nRF-Connect-Device-Manager",
           from: "1.0.0"
       )
   ],
   targets: [
-    .binaryTarget(
+    .target(
         name: "PBBluetooth",
-        path: "./Sources/PBBluetooth-v3.5.8.xcframework")
+        dependencies: [
+            .product(name: "iOSMcuManagerLibrary", package: "IOS-nRF-Connect-Device-Manager"),
+        ],
+        path: "./PBBluetooth/"
+    )
   ]
 )

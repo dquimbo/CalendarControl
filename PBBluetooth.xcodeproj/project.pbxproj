@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		C3577FCE1E67505E00932A4E /* PBBluetooth-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C3577FD11E67505E00932A4E /* Build configuration list for PBXAggregateTarget "PBBluetooth-Universal" */;
+			buildPhases = (
+				C3577FD21E67506E00932A4E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "PBBluetooth-Universal";
+			productName = "PBBluetooth-Universal";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		191D26EF27E9013A00DD9B72 /* PBMFiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26EE27E9013A00DD9B72 /* PBMFiCard.swift */; };
+		191D26F127E914AE00DD9B72 /* PBMFiIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26F027E914AE00DD9B72 /* PBMFiIdentifiers.swift */; };
+		191D26F327E920B000DD9B72 /* PBBondableDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191D26F227E920B000DD9B72 /* PBBondableDeviceProtocol.swift */; };
+		1922469B26022CEC0086F8D0 /* PBRebootableDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1922469A26022CEC0086F8D0 /* PBRebootableDevice.swift */; };
+		192247AE260B90D20086F8D0 /* PBChargingStatusReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192247AD260B90D20086F8D0 /* PBChargingStatusReporter.swift */; };
+		192C68D129895D6A007267D4 /* PBMFiWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C68D029895D6A007267D4 /* PBMFiWhite.swift */; };
+		192C68D3298ACA57007267D4 /* PBMFiTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C68D2298ACA57007267D4 /* PBMFiTag.swift */; };
+		192C68D5298ACA7A007267D4 /* PBMFiGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C68D4298ACA7A007267D4 /* PBMFiGreen.swift */; };
+		192C68D7298ACAA2007267D4 /* PBMFiR4KTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C68D6298ACAA2007267D4 /* PBMFiR4KTag.swift */; };
+		1939397025CC9703006D2916 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939396F25CC9703006D2916 /* Data+Utils.swift */; };
+		195C413827FC7860003995C9 /* PBMFiClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C413727FC7860003995C9 /* PBMFiClip.swift */; };
+		195E76882A607423007C6F6F /* PBMFiClipAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E76872A607423007C6F6F /* PBMFiClipAdvertisementParser.swift */; };
+		195E768A2A6079C8007C6F6F /* PBMFiClipV2AdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E76892A6079C8007C6F6F /* PBMFiClipV2AdvertisementParser.swift */; };
+		195E768C2A607A7B007C6F6F /* PBMFiR4KTagAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E768B2A607A7B007C6F6F /* PBMFiR4KTagAdvertisementParser.swift */; };
+		196EA7BD29F96D0A00BF1225 /* PBMFiClipV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EA7BC29F96D0A00BF1225 /* PBMFiClipV2.swift */; };
+		196EA7BF29F986FA00BF1225 /* PBMFiCardV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EA7BE29F986FA00BF1225 /* PBMFiCardV2.swift */; };
+		196EA7C129F9871600BF1225 /* PBMFiTagV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EA7C029F9871600BF1225 /* PBMFiTagV2.swift */; };
+		196EA7C329F99F1C00BF1225 /* PBMFiDeviceV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EA7C229F99F1C00BF1225 /* PBMFiDeviceV2.swift */; };
+		19900A9725C3093000417191 /* PBBluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19900A9625C3093000417191 /* PBBluetoothDevice.swift */; };
+		19900A9B25C309B900417191 /* PBCellularDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19900A9A25C309B900417191 /* PBCellularDevice.swift */; };
+		19900AA125C30E7100417191 /* PBFoundAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19900AA025C30E7100417191 /* PBFoundAdvertisementParser.swift */; };
+		19900ABD25C31D4C00417191 /* PBBluetoothUpdatableDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19900ABC25C31D4C00417191 /* PBBluetoothUpdatableDevice.swift */; };
+		19900AF325C35B6000417191 /* PBDeviceVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19900AF225C35B6000417191 /* PBDeviceVolume.swift */; };
+		199A673F25BF528800441D2A /* Error+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A673E25BF528800441D2A /* Error+Utils.swift */; };
+		199A675625C0540C00441D2A /* PBTrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A675525C0540C00441D2A /* PBTrackingMode.swift */; };
+		199A676425C0BBE600441D2A /* PBFoundRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A676325C0BBE600441D2A /* PBFoundRC.swift */; };
+		199B9AEB27EBBC990063D115 /* PBMFiDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B9AEA27EBBC990063D115 /* PBMFiDevice.swift */; };
+		199B9AED27EBC67F0063D115 /* PBDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B9AEC27EBC67F0063D115 /* PBDeviceType.swift */; };
+		199C58C2273B02BA0080DEE5 /* PBSMPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C58C1273B02BA0080DEE5 /* PBSMPProtocol.swift */; };
+		19AB30FE25C84DBC00F1AC45 /* PBBasicBluetoothDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB30FD25C84DBC00F1AC45 /* PBBasicBluetoothDevice.swift */; };
+		19AB310D25C861DF00F1AC45 /* PBToshibaChipProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB310C25C861DF00F1AC45 /* PBToshibaChipProtocol.swift */; };
+		19ACC1832A438090001BB3E9 /* iOSMcuManagerLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 19ACC1822A438090001BB3E9 /* iOSMcuManagerLibrary */; };
+		19B926C526F0FED300B13EE6 /* PBDeviceAutoConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B926C426F0FED300B13EE6 /* PBDeviceAutoConnectable.swift */; };
+		4B0A16F424859E5400F85E87 /* PBFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A16F224859E5400F85E87 /* PBFound.swift */; };
+		4B0A16F524859E5400F85E87 /* PBFoundRCAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0A16F324859E5400F85E87 /* PBFoundRCAdvertisementParser.swift */; };
+		4B10A38423BFE09B00C03E97 /* PBFinder2AdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10A38323BFE09B00C03E97 /* PBFinder2AdvertisementParser.swift */; };
+		4B10A38623BFE0A700C03E97 /* PBFinder2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10A38523BFE0A700C03E97 /* PBFinder2.swift */; };
+		4B2B737320DC0796009127D4 /* PBCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B737220DC0796009127D4 /* PBCard.swift */; };
+		4B2B737820DC07AE009127D4 /* PBCardAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B737720DC07AE009127D4 /* PBCardAdvertisementParser.swift */; };
+		C39EDA3C1E08A0A200424148 /* PBBluetooth.h in Headers */ = {isa = PBXBuildFile; fileRef = C39EDA3A1E08A0A200424148 /* PBBluetooth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C39EDAA91E08A8E500424148 /* PBHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAA81E08A8E500424148 /* PBHistory.swift */; };
+		C39EDAB21E08A91800424148 /* PBLocationReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAAE1E08A91800424148 /* PBLocationReading.swift */; };
+		C39EDAB31E08A91800424148 /* PBBatteryReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAAF1E08A91800424148 /* PBBatteryReading.swift */; };
+		C39EDAB41E08A91800424148 /* PBRSSIReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB01E08A91800424148 /* PBRSSIReading.swift */; };
+		C39EDAB51E08A91800424148 /* PBTemperatureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB11E08A91800424148 /* PBTemperatureReading.swift */; };
+		C39EDABA1E08A92200424148 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB61E08A92200424148 /* GlobalVariables.swift */; };
+		C39EDABB1E08A92200424148 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB71E08A92200424148 /* Enumerations.swift */; };
+		C39EDABC1E08A92200424148 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB81E08A92200424148 /* Extensions.swift */; };
+		C39EDABD1E08A92200424148 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAB91E08A92200424148 /* Notifications.swift */; };
+		C39EDAC11E08A97400424148 /* PBBroadcastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDABE1E08A97400424148 /* PBBroadcastManager.swift */; };
+		C39EDAC21E08A97400424148 /* PBBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDABF1E08A97400424148 /* PBBluetoothManager.swift */; };
+		C39EDAC91E08A97C00424148 /* PBDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAC41E08A97C00424148 /* PBDevice.swift */; };
+		C39EDACA1E08A97C00424148 /* PBHoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAC51E08A97C00424148 /* PBHoney.swift */; };
+		C39EDACC1E08A97C00424148 /* PBFinder1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAC71E08A97C00424148 /* PBFinder1.swift */; };
+		C39EDAD71E08A98300424148 /* PBAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAD01E08A98300424148 /* PBAdvertisementParser.swift */; };
+		C39EDAD91E08A98300424148 /* PBFinderAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAD21E08A98300424148 /* PBFinderAdvertisementParser.swift */; };
+		C39EDADA1E08A98300424148 /* PBHoneyAdvertisementParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDAD31E08A98300424148 /* PBHoneyAdvertisementParser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19ACC1892A4382C9001BB3E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		191D26EE27E9013A00DD9B72 /* PBMFiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiCard.swift; sourceTree = "<group>"; };
+		191D26F027E914AE00DD9B72 /* PBMFiIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiIdentifiers.swift; sourceTree = "<group>"; };
+		191D26F227E920B000DD9B72 /* PBBondableDeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBBondableDeviceProtocol.swift; sourceTree = "<group>"; };
+		1922469A26022CEC0086F8D0 /* PBRebootableDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBRebootableDevice.swift; sourceTree = "<group>"; };
+		192247AD260B90D20086F8D0 /* PBChargingStatusReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBChargingStatusReporter.swift; sourceTree = "<group>"; };
+		192C68D029895D6A007267D4 /* PBMFiWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiWhite.swift; sourceTree = "<group>"; };
+		192C68D2298ACA57007267D4 /* PBMFiTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiTag.swift; sourceTree = "<group>"; };
+		192C68D4298ACA7A007267D4 /* PBMFiGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiGreen.swift; sourceTree = "<group>"; };
+		192C68D6298ACAA2007267D4 /* PBMFiR4KTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiR4KTag.swift; sourceTree = "<group>"; };
+		1939396F25CC9703006D2916 /* Data+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Utils.swift"; sourceTree = "<group>"; };
+		195C413727FC7860003995C9 /* PBMFiClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiClip.swift; sourceTree = "<group>"; };
+		195E76872A607423007C6F6F /* PBMFiClipAdvertisementParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiClipAdvertisementParser.swift; sourceTree = "<group>"; };
+		195E76892A6079C8007C6F6F /* PBMFiClipV2AdvertisementParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiClipV2AdvertisementParser.swift; sourceTree = "<group>"; };
+		195E768B2A607A7B007C6F6F /* PBMFiR4KTagAdvertisementParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiR4KTagAdvertisementParser.swift; sourceTree = "<group>"; };
+		196EA7BC29F96D0A00BF1225 /* PBMFiClipV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiClipV2.swift; sourceTree = "<group>"; };
+		196EA7BE29F986FA00BF1225 /* PBMFiCardV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiCardV2.swift; sourceTree = "<group>"; };
+		196EA7C029F9871600BF1225 /* PBMFiTagV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiTagV2.swift; sourceTree = "<group>"; };
+		196EA7C229F99F1C00BF1225 /* PBMFiDeviceV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiDeviceV2.swift; sourceTree = "<group>"; };
+		19900A9625C3093000417191 /* PBBluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBBluetoothDevice.swift; sourceTree = "<group>"; };
+		19900A9A25C309B900417191 /* PBCellularDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBCellularDevice.swift; sourceTree = "<group>"; };
+		19900AA025C30E7100417191 /* PBFoundAdvertisementParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBFoundAdvertisementParser.swift; sourceTree = "<group>"; };
+		19900ABC25C31D4C00417191 /* PBBluetoothUpdatableDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBBluetoothUpdatableDevice.swift; sourceTree = "<group>"; };
+		19900AF225C35B6000417191 /* PBDeviceVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBDeviceVolume.swift; sourceTree = "<group>"; };
+		199A673E25BF528800441D2A /* Error+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utils.swift"; sourceTree = "<group>"; };
+		199A675525C0540C00441D2A /* PBTrackingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTrackingMode.swift; sourceTree = "<group>"; };
+		199A676325C0BBE600441D2A /* PBFoundRC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBFoundRC.swift; sourceTree = "<group>"; };
+		199B9AEA27EBBC990063D115 /* PBMFiDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBMFiDevice.swift; sourceTree = "<group>"; };
+		199B9AEC27EBC67F0063D115 /* PBDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBDeviceType.swift; sourceTree = "<group>"; };
+		199C58C1273B02BA0080DEE5 /* PBSMPProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBSMPProtocol.swift; sourceTree = "<group>"; };
+		19AB30FD25C84DBC00F1AC45 /* PBBasicBluetoothDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBBasicBluetoothDevice.swift; sourceTree = "<group>"; };
+		19AB310C25C861DF00F1AC45 /* PBToshibaChipProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBToshibaChipProtocol.swift; sourceTree = "<group>"; };
+		19B926C426F0FED300B13EE6 /* PBDeviceAutoConnectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBDeviceAutoConnectable.swift; sourceTree = "<group>"; };
+		4B0A16F224859E5400F85E87 /* PBFound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFound.swift; sourceTree = "<group>"; };
+		4B0A16F324859E5400F85E87 /* PBFoundRCAdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFoundRCAdvertisementParser.swift; sourceTree = "<group>"; };
+		4B10A38323BFE09B00C03E97 /* PBFinder2AdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFinder2AdvertisementParser.swift; sourceTree = "<group>"; };
+		4B10A38523BFE0A700C03E97 /* PBFinder2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFinder2.swift; sourceTree = "<group>"; };
+		4B2B737220DC0796009127D4 /* PBCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBCard.swift; sourceTree = "<group>"; };
+		4B2B737420DC07A1009127D4 /* PBBluetooth-Universal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PBBluetooth-Universal-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B2B737720DC07AE009127D4 /* PBCardAdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBCardAdvertisementParser.swift; sourceTree = "<group>"; };
+		C39EDA371E08A0A200424148 /* PBBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39EDA3A1E08A0A200424148 /* PBBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBBluetooth.h; sourceTree = "<group>"; };
+		C39EDA3B1E08A0A200424148 /* PBBluetooth-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PBBluetooth-Info.plist"; sourceTree = "<group>"; };
+		C39EDAA81E08A8E500424148 /* PBHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBHistory.swift; sourceTree = "<group>"; };
+		C39EDAAE1E08A91800424148 /* PBLocationReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBLocationReading.swift; sourceTree = "<group>"; };
+		C39EDAAF1E08A91800424148 /* PBBatteryReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBatteryReading.swift; sourceTree = "<group>"; };
+		C39EDAB01E08A91800424148 /* PBRSSIReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBRSSIReading.swift; sourceTree = "<group>"; };
+		C39EDAB11E08A91800424148 /* PBTemperatureReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBTemperatureReading.swift; sourceTree = "<group>"; };
+		C39EDAB61E08A92200424148 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		C39EDAB71E08A92200424148 /* Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		C39EDAB81E08A92200424148 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C39EDAB91E08A92200424148 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		C39EDABE1E08A97400424148 /* PBBroadcastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBroadcastManager.swift; sourceTree = "<group>"; };
+		C39EDABF1E08A97400424148 /* PBBluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBluetoothManager.swift; sourceTree = "<group>"; };
+		C39EDAC41E08A97C00424148 /* PBDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBDevice.swift; sourceTree = "<group>"; };
+		C39EDAC51E08A97C00424148 /* PBHoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBHoney.swift; sourceTree = "<group>"; };
+		C39EDAC71E08A97C00424148 /* PBFinder1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFinder1.swift; sourceTree = "<group>"; };
+		C39EDAD01E08A98300424148 /* PBAdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBAdvertisementParser.swift; sourceTree = "<group>"; };
+		C39EDAD21E08A98300424148 /* PBFinderAdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBFinderAdvertisementParser.swift; sourceTree = "<group>"; };
+		C39EDAD31E08A98300424148 /* PBHoneyAdvertisementParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBHoneyAdvertisementParser.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C39EDA331E08A0A200424148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACC1832A438090001BB3E9 /* iOSMcuManagerLibrary in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		191D26ED27E9011400DD9B72 /* MFi */ = {
+			isa = PBXGroup;
+			children = (
+				196EA7B929F96C7F00BF1225 /* v2 */,
+				191D26F027E914AE00DD9B72 /* PBMFiIdentifiers.swift */,
+				199B9AEA27EBBC990063D115 /* PBMFiDevice.swift */,
+				191D26EE27E9013A00DD9B72 /* PBMFiCard.swift */,
+				195C413727FC7860003995C9 /* PBMFiClip.swift */,
+				192C68D2298ACA57007267D4 /* PBMFiTag.swift */,
+				192C68D029895D6A007267D4 /* PBMFiWhite.swift */,
+				192C68D4298ACA7A007267D4 /* PBMFiGreen.swift */,
+				192C68D6298ACAA2007267D4 /* PBMFiR4KTag.swift */,
+			);
+			name = MFi;
+			sourceTree = "<group>";
+		};
+		1922469926022CBA0086F8D0 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1922469A26022CEC0086F8D0 /* PBRebootableDevice.swift */,
+				192247AD260B90D20086F8D0 /* PBChargingStatusReporter.swift */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		196EA7B929F96C7F00BF1225 /* v2 */ = {
+			isa = PBXGroup;
+			children = (
+				196EA7C229F99F1C00BF1225 /* PBMFiDeviceV2.swift */,
+				196EA7BC29F96D0A00BF1225 /* PBMFiClipV2.swift */,
+				196EA7BE29F986FA00BF1225 /* PBMFiCardV2.swift */,
+				196EA7C029F9871600BF1225 /* PBMFiTagV2.swift */,
+			);
+			name = v2;
+			sourceTree = "<group>";
+		};
+		199A673D25BF526C00441D2A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4B2B737420DC07A1009127D4 /* PBBluetooth-Universal-Bridging-Header.h */,
+				199A675525C0540C00441D2A /* PBTrackingMode.swift */,
+				19900AF225C35B6000417191 /* PBDeviceVolume.swift */,
+				199A673E25BF528800441D2A /* Error+Utils.swift */,
+				1939396F25CC9703006D2916 /* Data+Utils.swift */,
+				199B9AEC27EBC67F0063D115 /* PBDeviceType.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		199A676225C0BA9900441D2A /* Founds */ = {
+			isa = PBXGroup;
+			children = (
+				199A676325C0BBE600441D2A /* PBFoundRC.swift */,
+				4B0A16F224859E5400F85E87 /* PBFound.swift */,
+			);
+			name = Founds;
+			sourceTree = "<group>";
+		};
+		199A677625C0CB6800441D2A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1922469926022CBA0086F8D0 /* Features */,
+				19B926C426F0FED300B13EE6 /* PBDeviceAutoConnectable.swift */,
+				19AB30FD25C84DBC00F1AC45 /* PBBasicBluetoothDevice.swift */,
+				19900A9625C3093000417191 /* PBBluetoothDevice.swift */,
+				19900A9A25C309B900417191 /* PBCellularDevice.swift */,
+				19900ABC25C31D4C00417191 /* PBBluetoothUpdatableDevice.swift */,
+				191D26F227E920B000DD9B72 /* PBBondableDeviceProtocol.swift */,
+				19AB310C25C861DF00F1AC45 /* PBToshibaChipProtocol.swift */,
+				199C58C1273B02BA0080DEE5 /* PBSMPProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C39EDA2D1E08A0A200424148 = {
+			isa = PBXGroup;
+			children = (
+				C39EDA391E08A0A200424148 /* PBBluetooth */,
+				C39EDA381E08A0A200424148 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C39EDA381E08A0A200424148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39EDA371E08A0A200424148 /* PBBluetooth.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C39EDA391E08A0A200424148 /* PBBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				199A677625C0CB6800441D2A /* Protocols */,
+				199A673D25BF526C00441D2A /* Utils */,
+				C39EDAAD1E08A90700424148 /* AdvertisementParsers */,
+				C39EDAAC1E08A90000424148 /* Devices */,
+				C39EDAAB1E08A8F200424148 /* Managers */,
+				C39EDAAA1E08A8EB00424148 /* Core */,
+				C39EDAA71E08A8D400424148 /* Caching */,
+				C39EDA3A1E08A0A200424148 /* PBBluetooth.h */,
+				C39EDA3B1E08A0A200424148 /* PBBluetooth-Info.plist */,
+			);
+			path = PBBluetooth;
+			sourceTree = "<group>";
+		};
+		C39EDAA71E08A8D400424148 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				C39EDAAE1E08A91800424148 /* PBLocationReading.swift */,
+				C39EDAAF1E08A91800424148 /* PBBatteryReading.swift */,
+				C39EDAB01E08A91800424148 /* PBRSSIReading.swift */,
+				C39EDAB11E08A91800424148 /* PBTemperatureReading.swift */,
+				C39EDAA81E08A8E500424148 /* PBHistory.swift */,
+			);
+			name = Caching;
+			sourceTree = "<group>";
+		};
+		C39EDAAA1E08A8EB00424148 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C39EDAB61E08A92200424148 /* GlobalVariables.swift */,
+				C39EDAB71E08A92200424148 /* Enumerations.swift */,
+				C39EDAB81E08A92200424148 /* Extensions.swift */,
+				C39EDAB91E08A92200424148 /* Notifications.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C39EDAAB1E08A8F200424148 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C39EDABE1E08A97400424148 /* PBBroadcastManager.swift */,
+				C39EDABF1E08A97400424148 /* PBBluetoothManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		C39EDAAC1E08A90000424148 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				191D26ED27E9011400DD9B72 /* MFi */,
+				199A676225C0BA9900441D2A /* Founds */,
+				C39EDAC41E08A97C00424148 /* PBDevice.swift */,
+				C39EDAC71E08A97C00424148 /* PBFinder1.swift */,
+				4B2B737220DC0796009127D4 /* PBCard.swift */,
+				4B10A38523BFE0A700C03E97 /* PBFinder2.swift */,
+				C39EDAC51E08A97C00424148 /* PBHoney.swift */,
+			);
+			name = Devices;
+			sourceTree = "<group>";
+		};
+		C39EDAAD1E08A90700424148 /* AdvertisementParsers */ = {
+			isa = PBXGroup;
+			children = (
+				4B2B737720DC07AE009127D4 /* PBCardAdvertisementParser.swift */,
+				C39EDAD01E08A98300424148 /* PBAdvertisementParser.swift */,
+				C39EDAD21E08A98300424148 /* PBFinderAdvertisementParser.swift */,
+				4B10A38323BFE09B00C03E97 /* PBFinder2AdvertisementParser.swift */,
+				4B0A16F324859E5400F85E87 /* PBFoundRCAdvertisementParser.swift */,
+				19900AA025C30E7100417191 /* PBFoundAdvertisementParser.swift */,
+				C39EDAD31E08A98300424148 /* PBHoneyAdvertisementParser.swift */,
+				195E76872A607423007C6F6F /* PBMFiClipAdvertisementParser.swift */,
+				195E76892A6079C8007C6F6F /* PBMFiClipV2AdvertisementParser.swift */,
+				195E768B2A607A7B007C6F6F /* PBMFiR4KTagAdvertisementParser.swift */,
+			);
+			name = AdvertisementParsers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C39EDA341E08A0A200424148 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39EDA3C1E08A0A200424148 /* PBBluetooth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C39EDA361E08A0A200424148 /* PBBluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39EDA3F1E08A0A200424148 /* Build configuration list for PBXNativeTarget "PBBluetooth" */;
+			buildPhases = (
+				C39EDA321E08A0A200424148 /* Sources */,
+				C39EDA331E08A0A200424148 /* Frameworks */,
+				C39EDA341E08A0A200424148 /* Headers */,
+				C39EDA351E08A0A200424148 /* Resources */,
+				19ACC1892A4382C9001BB3E9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PBBluetooth;
+			packageProductDependencies = (
+				19ACC1822A438090001BB3E9 /* iOSMcuManagerLibrary */,
+			);
+			productName = PBBluetooth;
+			productReference = C39EDA371E08A0A200424148 /* PBBluetooth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C39EDA2E1E08A0A200424148 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Nick Franks";
+				TargetAttributes = {
+					C3577FCE1E67505E00932A4E = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0940;
+						ProvisioningStyle = Automatic;
+					};
+					C39EDA361E08A0A200424148 = {
+						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 1220;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C39EDA311E08A0A200424148 /* Build configuration list for PBXProject "PBBluetooth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = C39EDA2D1E08A0A200424148;
+			packageReferences = (
+				19ACC1812A438090001BB3E9 /* XCRemoteSwiftPackageReference "IOS-nRF-Connect-Device-Manager" */,
+			);
+			productRefGroup = C39EDA381E08A0A200424148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C39EDA361E08A0A200424148 /* PBBluetooth */,
+				C3577FCE1E67505E00932A4E /* PBBluetooth-Universal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C39EDA351E08A0A200424148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3577FD21E67506E00932A4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\nif [ -d ${PROJECT_NAME}.xcworkspace ]; then\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1 OTHER_CFLAGS=\"-fembed-bitcode\"\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1 OTHER_CFLAGS=\"-fembed-bitcode\"\nelse\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1 OTHER_CFLAGS=\"-fembed-bitcode\"\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1 OTHER_CFLAGS=\"-fembed-bitcode\"\nfi\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C39EDA321E08A0A200424148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192C68D7298ACAA2007267D4 /* PBMFiR4KTag.swift in Sources */,
+				19AB310D25C861DF00F1AC45 /* PBToshibaChipProtocol.swift in Sources */,
+				C39EDABB1E08A92200424148 /* Enumerations.swift in Sources */,
+				192C68D3298ACA57007267D4 /* PBMFiTag.swift in Sources */,
+				199B9AEB27EBBC990063D115 /* PBMFiDevice.swift in Sources */,
+				19AB30FE25C84DBC00F1AC45 /* PBBasicBluetoothDevice.swift in Sources */,
+				19900ABD25C31D4C00417191 /* PBBluetoothUpdatableDevice.swift in Sources */,
+				199B9AED27EBC67F0063D115 /* PBDeviceType.swift in Sources */,
+				1922469B26022CEC0086F8D0 /* PBRebootableDevice.swift in Sources */,
+				196EA7BF29F986FA00BF1225 /* PBMFiCardV2.swift in Sources */,
+				192C68D129895D6A007267D4 /* PBMFiWhite.swift in Sources */,
+				4B0A16F524859E5400F85E87 /* PBFoundRCAdvertisementParser.swift in Sources */,
+				199A673F25BF528800441D2A /* Error+Utils.swift in Sources */,
+				C39EDAC21E08A97400424148 /* PBBluetoothManager.swift in Sources */,
+				C39EDAD91E08A98300424148 /* PBFinderAdvertisementParser.swift in Sources */,
+				191D26F127E914AE00DD9B72 /* PBMFiIdentifiers.swift in Sources */,
+				C39EDACC1E08A97C00424148 /* PBFinder1.swift in Sources */,
+				195E768A2A6079C8007C6F6F /* PBMFiClipV2AdvertisementParser.swift in Sources */,
+				C39EDABA1E08A92200424148 /* GlobalVariables.swift in Sources */,
+				C39EDAD71E08A98300424148 /* PBAdvertisementParser.swift in Sources */,
+				196EA7BD29F96D0A00BF1225 /* PBMFiClipV2.swift in Sources */,
+				C39EDAB31E08A91800424148 /* PBBatteryReading.swift in Sources */,
+				199C58C2273B02BA0080DEE5 /* PBSMPProtocol.swift in Sources */,
+				191D26F327E920B000DD9B72 /* PBBondableDeviceProtocol.swift in Sources */,
+				C39EDAC91E08A97C00424148 /* PBDevice.swift in Sources */,
+				195E76882A607423007C6F6F /* PBMFiClipAdvertisementParser.swift in Sources */,
+				C39EDABD1E08A92200424148 /* Notifications.swift in Sources */,
+				4B2B737320DC0796009127D4 /* PBCard.swift in Sources */,
+				191D26EF27E9013A00DD9B72 /* PBMFiCard.swift in Sources */,
+				195E768C2A607A7B007C6F6F /* PBMFiR4KTagAdvertisementParser.swift in Sources */,
+				196EA7C329F99F1C00BF1225 /* PBMFiDeviceV2.swift in Sources */,
+				4B10A38423BFE09B00C03E97 /* PBFinder2AdvertisementParser.swift in Sources */,
+				195C413827FC7860003995C9 /* PBMFiClip.swift in Sources */,
+				192C68D5298ACA7A007267D4 /* PBMFiGreen.swift in Sources */,
+				C39EDACA1E08A97C00424148 /* PBHoney.swift in Sources */,
+				199A676425C0BBE600441D2A /* PBFoundRC.swift in Sources */,
+				C39EDADA1E08A98300424148 /* PBHoneyAdvertisementParser.swift in Sources */,
+				4B10A38623BFE0A700C03E97 /* PBFinder2.swift in Sources */,
+				19900A9725C3093000417191 /* PBBluetoothDevice.swift in Sources */,
+				19900AF325C35B6000417191 /* PBDeviceVolume.swift in Sources */,
+				4B2B737820DC07AE009127D4 /* PBCardAdvertisementParser.swift in Sources */,
+				1939397025CC9703006D2916 /* Data+Utils.swift in Sources */,
+				4B0A16F424859E5400F85E87 /* PBFound.swift in Sources */,
+				19B926C526F0FED300B13EE6 /* PBDeviceAutoConnectable.swift in Sources */,
+				C39EDABC1E08A92200424148 /* Extensions.swift in Sources */,
+				C39EDAB51E08A91800424148 /* PBTemperatureReading.swift in Sources */,
+				C39EDAA91E08A8E500424148 /* PBHistory.swift in Sources */,
+				199A675625C0540C00441D2A /* PBTrackingMode.swift in Sources */,
+				C39EDAB21E08A91800424148 /* PBLocationReading.swift in Sources */,
+				19900A9B25C309B900417191 /* PBCellularDevice.swift in Sources */,
+				C39EDAB41E08A91800424148 /* PBRSSIReading.swift in Sources */,
+				C39EDAC11E08A97400424148 /* PBBroadcastManager.swift in Sources */,
+				196EA7C129F9871600BF1225 /* PBMFiTagV2.swift in Sources */,
+				19900AA125C30E7100417191 /* PBFoundAdvertisementParser.swift in Sources */,
+				192247AE260B90D20086F8D0 /* PBChargingStatusReporter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C3577FCF1E67505E00932A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PBBluetooth/PBBluetooth-Universal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VALID_ARCHS = "arm7 arm7s arm64";
+			};
+			name = Debug;
+		};
+		C3577FD01E67505E00932A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PBBluetooth/PBBluetooth-Universal-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				VALID_ARCHS = "arm7 arm7s arm64";
+			};
+			name = Release;
+		};
+		C39EDA3D1E08A0A200424148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm7 arm7s arm64";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C39EDA3E1E08A0A200424148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm7 arm7s arm64";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C39EDA401E08A0A200424148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				INFOPLIST_FILE = "PBBluetooth/PBBluetooth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = pebblebee.PBBluetooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "armv7 armv7s arm64 i386";
+			};
+			name = Debug;
+		};
+		C39EDA411E08A0A200424148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				INFOPLIST_FILE = "PBBluetooth/PBBluetooth-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = pebblebee.PBBluetooth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "armv7 armv7s arm64 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3577FD11E67505E00932A4E /* Build configuration list for PBXAggregateTarget "PBBluetooth-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3577FCF1E67505E00932A4E /* Debug */,
+				C3577FD01E67505E00932A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39EDA311E08A0A200424148 /* Build configuration list for PBXProject "PBBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39EDA3D1E08A0A200424148 /* Debug */,
+				C39EDA3E1E08A0A200424148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39EDA3F1E08A0A200424148 /* Build configuration list for PBXNativeTarget "PBBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39EDA401E08A0A200424148 /* Debug */,
+				C39EDA411E08A0A200424148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19ACC1812A438090001BB3E9 /* XCRemoteSwiftPackageReference "IOS-nRF-Connect-Device-Manager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NordicSemiconductor/IOS-nRF-Connect-Device-Manager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19ACC1822A438090001BB3E9 /* iOSMcuManagerLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19ACC1812A438090001BB3E9 /* XCRemoteSwiftPackageReference "IOS-nRF-Connect-Device-Manager" */;
+			productName = iOSMcuManagerLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C39EDA2E1E08A0A200424148 /* Project object */;
+}
